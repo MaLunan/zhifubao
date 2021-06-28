@@ -38,8 +38,8 @@ async function createOrder(goods) {
     }
     const formData = new AlipayFormData(); // 获取一个实例化对象
     console.log('dasb')
-    formData.addField('returnUrl', 'http://localhost:9999/index.html'); // 客户端支付成功后会同步跳回的地址
-    formData.addField('notifyUrl', 'http://localhost:9999/notify.html'); // 支付宝在用户支付成功后会异步通知的回调地址，必须在公网 IP 上才能收到
+    formData.addField('returnUrl', 'http://39.104.75.66:9999/index.html'); // 客户端支付成功后会同步跳回的地址
+    formData.addField('notifyUrl', 'http://39.104.75.66:9999/notify.html'); // 支付宝在用户支付成功后会异步通知的回调地址，必须在公网 IP 上才能收到
     formData.addField('bizContent', bizContent); // 将必要的参数集合添加进 form 表单
 
     // 异步向支付宝发送生成订单请求, 第二个参数为公共参数，不需要的话传入空对象就行
